@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/codespaces-blank/codespaces-blank.csproj": {}
+    "/workspace/coco/codespaces-blank.csproj": {}
   },
   "projects": {
-    "/workspaces/codespaces-blank/codespaces-blank.csproj": {
+    "/workspace/coco/codespaces-blank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/codespaces-blank/codespaces-blank.csproj",
+        "projectUniqueName": "/workspace/coco/codespaces-blank.csproj",
         "projectName": "codespaces-blank",
-        "projectPath": "/workspaces/codespaces-blank/codespaces-blank.csproj",
-        "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/codespaces-blank/obj/",
+        "projectPath": "/workspace/coco/codespaces-blank.csproj",
+        "packagesPath": "/home/gitpod/.nuget/packages/",
+        "outputPath": "/workspace/coco/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
+          "/home/gitpod/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/dotnet/7.0.306/sdk/7.0.306/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/gitpod/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

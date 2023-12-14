@@ -1,4 +1,6 @@
 STORE myVar "Hello, World!"
 WRITE "Contents of myVar: $myVar"
-READMSG "Please Enter your name"
-READLINE $readLine
+READMSG "Please Enter a filename: "
+READLINE $fName
+READFILE $fName $fPip
+WRITE $fName

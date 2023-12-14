@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DQHwWUHHGaXJDdRN0VwkrEODIeXdFPcm8pxk9FIgrqHvpZoPems7pHw7yPMHULpJLxJWF0Mq3L+CwYsKSkp8ug==",
+  "dgSpecHash": "RuEP2Y01mHkdPRHLEn9lYQ71KcNEpaQncM/i5WfBV8d9F9dNolUTNFhHMQGAqEM2PajtlFD6aai4MSNRyQXcMA==",
   "success": true,
-  "projectFilePath": "/workspaces/codespaces-blank/codespaces-blank.csproj",
+  "projectFilePath": "/workspace/coco/codespaces-blank.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

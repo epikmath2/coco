@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Program{
     static ArrayList  nameVars = new ArrayList();
     static void ECHO(string stri){
-        
+    
         if(stri.Contains("$")){
             string alsd = stri.Split("$")[1];
             string bltt = alsd.Split(" ")[0];
@@ -60,11 +60,56 @@ public class Program{
             case "READMSG":
                 READMSG(args[1].Split('"')[1]);
                 break;
-            break; 
+            case "READLINE":
+                string readM = Console.ReadLine();
+                string stri = args[1];
+                 if(stri.Contains("$")){
+                    string alsd = stri.Split("$")[1];
+                    string bltt = alsd.Split(" ")[0];
+        
+                    nameVars.Add(bltt+":"+readM);
+                    
+                    }else{
+                         //Dismiss it.
+
+                    }
+                break;
+            case "READFILE":
+                string fileName = args[1];
+               
+                 if(fileName.Contains("$")){
+            string alsd = fileName.Split("$")[1];
+            string bltt = alsd.Split(" ")[0];
+
+            string fixStr = fileName.Replace("$"+bltt,findVar(bltt));
+            fileName = fixStr;
+        }else{
+            //ofc dismiss
+        }
+                string pipeVar = args[2];
+                 if(pipeVar.Contains("$")){
+            string alsd = pipeVar.Split("$")[1];
+            string bltt = alsd.Split(" ")[0];
+            string liser = File.ReadAllText(fileName);
+            nameVars.Add(bltt+":"+liser);
+            
+        }else{
+             //Dissmiss
+        }
+            break;
+            case "IF":
+                string condition = args[1];
+                string opperator = args[2];
+                string gotoOp = args[3];
+                //Place holder
+
+            break;
             default:
                 Console.Error.WriteLine("Invalid Syntax.");
             break;
+        
         }
+
     }
     public static void Main(String[] args){
         using (StreamReader read = new StreamReader(args[0])) {
