@@ -30,6 +30,17 @@ public class Program{
         }
         return blayt;
     }
+    public static void READMSG(string stri){
+        if(stri.Contains("$")){
+            string alsd = stri.Split("$")[1];
+            string bltt = alsd.Split(" ")[0];
+
+            string fixStr = stri.Replace("$"+bltt,findVar(bltt));
+            Console.Write(fixStr);
+        }else{
+             Console.Write(stri);
+        }
+    }
     public static void parseCommand(string command, string[] args){
         switch (command)
         {
@@ -39,14 +50,19 @@ public class Program{
             case "STORE":
             string varName = args[1];
             string argsValue = args[2];
-            nameVars.Add(varName+":"+argsValue);
+            string braV = argsValue.Split('"')[1];
+            nameVars.Add(varName+":"+braV);
             
             break;
             case "LIST":
             Console.WriteLine(findVar(args[1]));
             break;
+            case "READMSG":
+                READMSG(args[1].Split('"')[1]);
+                break;
+            break; 
             default:
-
+                Console.Error.WriteLine("Invalid Syntax.");
             break;
         }
     }
@@ -54,10 +70,13 @@ public class Program{
         using (StreamReader read = new StreamReader(args[0])) {
          string line;
          while ((line = read.ReadLine()) != null) {
-            string Command = line.Split(" ")[0];
-            string[] cArgs = WSplit(line.Split(Command)[1]);
-            parseCommand(Command,cArgs);
-          
+            if(line == "" || line == " "){
+
+            }else{
+                string Command = line.Split(" ")[0];
+                string[] cArgs = WSplit(line.Split(Command)[1]);
+                parseCommand(Command,cArgs);
+            }
          }
       }
       static string[] WSplit(string input)

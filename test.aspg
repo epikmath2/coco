@@ -1,2 +1,4 @@
 STORE myVar "Hello, World!"
 WRITE "Contents of myVar: $myVar"
+READMSG "Please Enter your name"
+READLINE $readLine
