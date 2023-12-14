@@ -1,0 +1,2 @@
+STORE myVar "Hello, World!"
+WRITE "Contents of myVar: $myVar"
