@@ -4,8 +4,11 @@ using System.Collections.Generic;
 
 public class Program{
     static ArrayList  nameVars = new ArrayList();
-    static void ECHO(string stri){
-    
+    static void ECHO(string stri1){
+        string stri = "";
+        if(stri1.Contains('"')){
+            stri = stri1.Split('"')[1];
+        }
         if(stri.Contains("$")){
             string alsd = stri.Split("$")[1];
             string bltt = alsd.Split(" ")[0];
@@ -45,7 +48,10 @@ public class Program{
         switch (command)
         {
             case "WRITE":
-                ECHO(args[1].Split('"')[1]);
+                ECHO(args[1]);
+                break;
+            case "WRITEVAR":
+                Console.WriteLine("Use of illigal function! update v0.3.2");
                 break;
             case "STORE":
             string varName = args[1];

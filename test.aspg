@@ -3,4 +3,4 @@ WRITE "Contents of myVar: $myVar"
 READMSG "Please Enter a filename: "
 READLINE $fName
 READFILE $fName $fPip
-WRITE $fName
+WRITE "$fPip"
